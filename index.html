@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>game</title>
+    <link rel="stylesheet" href="stlyes.css" />
+  </head>
+  <body>
+    <div class="fun" onclick="jump()">
+      <div class="instructions">
+        <h2>INSTRUCTIONS:</h2>
+        <h3>Click to jump</h3>
+        <br />
+        <h2 id="runScore">Your score is <span id="scoreSpan">0</span></h2>
+      </div>
+
+      <div class="alret" id="alret">
+        <img src="./assets/img/jolly.png" alt="jolly" width="100px" />
+        <h3>Game over</h3>
+        <h1>Your score is <span id="gameOver"></span></h1>
+        <br />
+        <button onclick=" tryAgain(); run();">
+          <span class="shadow"></span>
+          <span class="edge"></span>
+          <span class="front text"> try again </span>
+        </button>
+      </div>
+
+      <div id="game">
+        <div id="man" class="man">
+          <img
+            src="./assets/img/stand.png"
+            alt="stand"
+            width="65px"
+            id="standImg"
+          />
+
+          <img
+            src="./assets/img/running.gif"
+            alt="animation"
+            width="100px"
+            id="runImg"
+            style="display: none"
+          />
+        </div>
+
+        <div class="landBase">
+          <div id="land1" class="lands">
+            <img
+              src="./assets/img/object.png"
+              alt="object"
+              width="35px"
+              id="objectImg"
+            />
+          </div>
+        </div>
+
+        <!-- <div class="ground"></div> -->
+      </div>
+    </div>
+
+    <button onclick="run()" id="start">
+      <span class="shadow"></span>
+      <span class="edge"></span>
+      <span class="front text"> Start </span>
+    </button>
+
+    <audio
+      autoplay
+      loop
+      style="display: none"
+      src="./assets/music/super-mario-bros-4293.mp3"
+    ></audio>
+    <script src="sricpt.js"></script>
+  </body>
+</html>
